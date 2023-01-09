@@ -1,31 +1,23 @@
 // Assignment code here
-//Global Variables for Special, Upper and lower case characters
-var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*","()"];
-var numericCharacters =["0", "1","2", "3", "4", "5", "6", "7", "8", "9" ];
-var lowerCaseCharacters =["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n","o", "p", "q", "r", "s","t", "u", "v", "w", "x", "y", "z" ];
-var upperCaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-var passwordLength = 12;
-var result ="";
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+"
+  let passwordLength= 16;
+  let result ="";
+  let element = document.getElementById("password")
+  
+  
 
-  passwordText.value = password;
+
+for (var i = 0; i <= passwordLength; i++){
+  let randomNumber = Math.floor(Math.random() * chars.length);
+
+  result += chars.substring(randomNumber,randomNumber + 1)
+  element.value = result;
+}
+  
+
+
 
 }
+ 
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-function generatePassword(){
-    for( var i =0, n = 
-
-
-
-
-    return result
-}
